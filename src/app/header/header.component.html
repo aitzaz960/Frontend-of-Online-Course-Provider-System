@@ -1,0 +1,45 @@
+<link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+
+<div class="main_div">
+    <h1 style=" font-family: 'Playfair Display', serif; font-weight: 700; font-style: italic;">Pakistan's Best Online Course Platform</h1>
+    <div class="sub_div"> 
+        <div id="lower-vertical">
+            <div id="left-colomn">
+                <label for="level">Level</label>
+                <select [(ngModel)]="selectedlevel" (ngModelChange)="levelValueChanged($event)">
+                    <option value="null"> <a> </a></option>
+                    <option value="beginner" > <a (click)=apply_filters()> Beginner</a></option>
+                    <option value="intermediate"> <a (click)=apply_filters()> Intermediate</a></option>
+                    <option value="expert"> <a (click)=apply_filters()> Expert</a></option>
+                </select>
+            </div>
+            <div id="center-colomn">
+                <label for="language">Language</label>
+                <select [(ngModel)]="selectedlang" (ngModelChange)="langValueChanged($event)">
+                    <option [ngValue]="null"> <a> </a> </option>
+                    <option value="Urdu"> <a (click)=apply_filters()> Urdu </a> </option>
+                    <option value="English"> <a (click)=apply_filters()> English </a> </option>
+                    <option value="French"> <a (click)=apply_filters()> French </a> </option>
+                    <option value="German"> <a (click)=apply_filters()> German </a> </option>
+                    <option value="Italian"> <a (click)=apply_filters()> Italian </a> </option>
+                </select>
+            </div>
+            <div id="right-colomn">
+                <label for="rating">Rating</label>
+                <select [(ngModel)]="selectedrating" (ngModelChange)="ratingValueChanged($event)">
+                    <option [ngValue]="null"> <a>  </a> </option>
+                    <option [ngValue]="1"> <a (click)=apply_filters()> 1 </a> </option>
+                    <option [ngValue]="2"> <a (click)=apply_filters()> 2 </a> </option>
+                    <option [ngValue]="3"> <a (click)=apply_filters()> 3 </a> </option>
+                    <option [ngValue]="4"> <a (click)=apply_filters()> 4 </a> </option>
+                    <option [ngValue]="5"> <a (click)=apply_filters()> 5 </a> </option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div id="button-div">
+            <button (click)="onClick()">Apply</button>
+        </div>
+    </div>
+</div>

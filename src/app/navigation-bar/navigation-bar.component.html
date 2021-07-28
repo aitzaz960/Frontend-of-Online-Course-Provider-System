@@ -1,0 +1,12 @@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div id="courses-list" class="courses-list">
+        <div class="courses" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><a routerLink="/frontend">Frontend Development</a></div>
+        <div class="courses" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><a role="button" (click)="show_backend()" href="#">Backend Development</a></div>
+        <div class="courses" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><a role="button" (click)="show_mean()" href="#">MEAN Stack Development</a></div>
+        <div class="courses" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><a role="button" (click)="show_mern()" href="#">MERN Stack Development</a></div>
+        <div class="courses" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><a role="button" (click)="show_fullstack()" href="#">Full Stack Development</a></div>
+    </div>
+
+    <router-outlet></router-outlet>

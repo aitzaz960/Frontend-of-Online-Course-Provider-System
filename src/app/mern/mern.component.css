@@ -1,0 +1,77 @@
+.card-row{
+
+    justify-content: space-between;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+.title {
+    color: grey;
+    font-size: 18px;
+}
+#details {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+.checked {
+    color: orange;
+}
+
+.middle-card{
+        margin-left: 33%;
+        width:33%;
+    }
+
+
+
+    button {
+        background-color: green;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 12px 26px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        transition-duration: 0.4s;
+      }
+      button:hover{
+          background-color:gray;
+          color: white;
+      }
+
+      #details{
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          background-color: grey;
+          justify-content: center;
+      }
+      #details td {
+        border: 1px solid #ddd;
+        font-size: 16px;
+
+      }
+
+    #details tr:hover {background-color: #ddd;}

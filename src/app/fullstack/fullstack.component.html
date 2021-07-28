@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div *ngFor="let course of my_courses; let indexOfElement=index">
+    <div class="card-row">
+        <div class="middle-card">
+            <div class="card">
+                <img src={{course.pictureURL}} alt="John" style="width: 100%;">
+                <h1>{{course.course_title}}</h1>
+                <p class="title">{{course.instructor_name}}</p>
+                <div *ngFor= "let star of course.rating" style="display: inline-block;">
+                    <span *ngIf="star" class="fa fa-star checked"></span>
+                    <span *ngIf="star==false" class="fa fa-star"></span>
+                </div>
+                <p>${{course.price}}</p>
+
+                <div><p><button *ngIf="button_1[course.course_id - 1]" (click)=show_details(course.course_id)>See Details</button></p></div>
+
+                <div *ngIf="details[course.course_id - 1]">
+                    <table id="details">
+                        <tr>
+                            <td>Course Description</td>
+                            <td>{{course.course_description}}</td>
+                        </tr>
+                        <tr>
+                            <td>Instructor Description</td>
+                            <td>{{course.instructor_description}}</td>
+                        </tr>
+                        <tr>
+                            <td>Language</td>
+                            <td>{{course.language}}</td>
+                        </tr>
+                        <tr>
+                            <td>Level</td>
+                            <td>{{course.level}}</td>
+                        </tr>
+                        <tr>
+                            <td>Outline</td>
+                            <td>
+                                <ul>
+                                    <div *ngFor="let item of course.outline">
+                                        <li>{{item}}</li>
+                                    </div>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>No of Lectures</td>
+                            <td>{{course.NoOdLectures}}</td>
+                        </tr>
+                        <tr>
+                            <td>No of Hours</td>
+                            <td>{{course.NoOfHours}}</td>
+                        </tr>
+                        <tr>
+                            <td>No of Quizez</td>
+                            <td>{{course.quizzes}}</td>
+                        </tr>
+                        <tr>
+                            <td>No of exercises</td>
+                            <td>{{course.exercises}}</td>
+                        </tr>
+                        <tr>
+                            <td>No of students enrolled</td>
+                            <td>{{course.studentsEnrolled}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div><p><button *ngIf="button_2[course.course_id - 1]" (click)=hide_details(course.course_id)>Hide Details</button></p></div>
+            </div>
+        </div>
+    </div>
+</div>
